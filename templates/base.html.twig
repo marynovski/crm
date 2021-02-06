@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+
+        {% block javascripts %}{% endblock %}
+    </head>
+    <body>
+        <nav id="nav">
+            <a href="{{ path('users_index') }}">Users</a>
+            <a href="{{ path('contractors_index') }}">Contractors</a>
+            <a href="{{ path('invoices_index') }}">Invoices</a>
+        </nav>
+        {% block body %}{% endblock %}
+    </body>
+</html>
